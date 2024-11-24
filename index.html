@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeSync</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <i class="fas fa-clock"></i>
+                <span>TimeSync</span>
+            </div>
+            <button id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="clock">
+                <i class="fas fa-clock"></i> Horloge
+            </button>
+            <button class="tab-btn" data-tab="timer">
+                <i class="fas fa-hourglass"></i> Minuteur
+            </button>
+            <button class="tab-btn" data-tab="stopwatch">
+                <i class="fas fa-stopwatch"></i> Chronomètre
+            </button>
+            <button class="tab-btn" data-tab="pomodoro">
+                <i class="fas fa-tasks"></i> Pomodoro
+            </button>
+        </div>
+
+        <!-- Contenu -->
+        <div class="content">
+            <!-- Horloge -->
+            <div id="clock" class="tab-content active">
+                <div class="clock-display">
+                    <div class="time">00:00:00</div>
+                    <div class="date">1 Janvier 2024</div>
+                </div>
+            </div>
+
+            <!-- Minuteur -->
+            <div id="timer" class="tab-content">
+                <div class="timer-display">
+                    <div class="time">00:00:00</div>
+                    <div class="controls">
+                        <input type="number" id="hours" min="0" max="23" value="0">
+                        <input type="number" id="minutes" min="0" max="59" value="0">
+                        <input type="number" id="seconds" min="0" max="59" value="0">
+                    </div>
+                    <div class="buttons">
+                        <button id="timer-start">Démarrer</button>
+                        <button id="timer-reset">Réinitialiser</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chronomètre -->
+            <div id="stopwatch" class="tab-content">
+                <div class="stopwatch-display">
+                    <div class="time">00:00:00</div>
+                    <div class="buttons">
+                        <button id="stopwatch-start">Démarrer</button>
+                        <button id="stopwatch-lap">Tour</button>
+                        <button id="stopwatch-reset">Réinitialiser</button>
+                    </div>
+                    <div class="laps"></div>
+                </div>
+            </div>
+
+            <!-- Pomodoro -->
+            <div id="pomodoro" class="tab-content">
+                <div class="pomodoro-display">
+                    <div class="time">25:00</div>
+                    <div class="mode">Travail</div>
+                    <div class="buttons">
+                        <button id="pomodoro-start">Démarrer</button>
+                        <button id="pomodoro-reset">Réinitialiser</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

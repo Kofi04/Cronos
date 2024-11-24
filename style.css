@@ -1,0 +1,142 @@
+/* Variables */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5f5f5;
+    --text-color: #333;
+    --background-color: #fff;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --primary-color: #64b5f6;
+    --secondary-color: #333;
+    --text-color: #fff;
+    --background-color: #1a1a1a;
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Content */
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Time displays */
+.time {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Inputs */
+input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+/* Laps */
+.laps {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.lap {
+    padding: 10px;
+    border-bottom: 1px solid var(--text-color);
+} 
